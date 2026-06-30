@@ -43,6 +43,22 @@ do
             Console.WriteLine("no hay archivos");
         } 
        
+       string nuevaRuta = "reporte_archivos.csv";
+
+       using(var stream = new StreamWriter(nuevaRuta))
+        {
+            string nombre;
+            stream.WriteLine("Archivo, Tamaño en KB, Fecha de ultima modificación");
+            foreach(var archivo in archivos)
+            {
+                nombre = Path.GetFileNameWithoutExtension(archivo);
+                var info = new FileInfo(archivo);
+                var tama = info.Length / 1024;
+                var ultimaFecha = info.LastWriteTime;
+                stream.WriteLine($"{nombre},{tama},{ultimaFecha}");
+            }
+
+        }
     }
     else
     {
