@@ -48,4 +48,4 @@ do
     {
         Console.WriteLine("la ruta ingresada no es valida");
     }
-}while(validarDireccion == false);
+}while(validarDireccion == false); //funciona
