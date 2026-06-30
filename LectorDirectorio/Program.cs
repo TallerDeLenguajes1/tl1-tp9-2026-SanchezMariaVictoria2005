@@ -11,5 +11,7 @@ do
     if (Directory.Exists(direccion))
     {
         validarDireccion = true;
+        var directorios = Directory.GetDirectories(direccion);//obtengo todos los subdirectorios
+        var archivos = Directory.GetFiles(direccion); //obtengo todos los archivos de ese directorio
     }
 }while(validarDireccion == false);
