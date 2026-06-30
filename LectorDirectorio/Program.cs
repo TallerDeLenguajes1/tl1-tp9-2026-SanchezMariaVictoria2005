@@ -14,7 +14,7 @@ do
         var directorios = Directory.GetDirectories(direccion);//obtengo todos los subdirectorios
         var archivos = Directory.GetFiles(direccion); //obtengo todos los archivos de ese directorio
 
-        if (directorios.Length > 0)
+        if (directorios.Length > 0) //funcionando
         {
             Console.WriteLine("LISTADO DE DIRECTORIOS");
              foreach (var directorio in directorios) //listo los subdirectorios
@@ -24,7 +24,7 @@ do
         }
         else
         {
-            Console.WriteLine("no hay directorios");
+            Console.WriteLine("no hay directorios");//funcionando
         }
 
         if (archivos.Length > 0)
